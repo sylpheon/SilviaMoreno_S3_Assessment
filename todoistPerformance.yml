@@ -9,7 +9,7 @@ config:
       name: "Phase 1"
   defaults:
     headers:
-      Authorization: Bearer "{{ $processEnvironment.TOKEN }}"
+      Authorization: Bearer {{ $processEnvironment.TOKEN }}
       Content-type: application/json
   variables:
     taskURL: 
