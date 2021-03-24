@@ -1,0 +1,21 @@
+{
+  "name": "performance_artillery",
+  "version": "1.0.0",
+  "description": "S3 assessment regarding performance testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "artillery run --output results/report.json todoistPerformance.yml && artillery report --output results/report.html results/report.json"
+  },
+  "keywords": [
+    "performance",
+    "artillery"
+  ],
+  "author": "Silvia Moreno",
+  "license": "ISC",
+  "dependencies": {
+    "artillery": "^1.6.2",
+    "artillery-plugin-faker": "^3.0.0",
+    "faker": "^5.4.0",
+    "faker-cli": "^2.0.0"
+  }
+}

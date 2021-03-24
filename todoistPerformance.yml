@@ -1,0 +1,54 @@
+config:
+  #plugins:
+    #faker:
+      #locale: en
+  target: "https://api.todoist.com"
+  phases:
+    - duration: 5
+      arrivalRate: 1
+      name: "Phase 1"
+  defaults:
+    headers:
+      Authorization: Bearer "{{ $processEnvironment.TOKEN }}"
+      Content-type: application/json
+  variables:
+    taskURL: 
+      - "/rest/v1/tasks"
+
+    #processor: "./my-faker.js"
+  # For more information: https://artillery.io/docs/script-reference/
+
+scenarios:
+  - name: "Challenge tasks"
+    flow:
+      - post:  ##Create info
+          url: "{{ taskURL }}" #Create a new task
+          json:
+            content: "A new task" ##"$faker.lorem.content"
+          capture:
+            json: "$.id"
+            as: "taskID"
+      - log: "task's id is {{ taskID }}"
+
+      - get: ##Read/Get info
+          url: "{{ taskURL }}" #Get active tasks
+
+      - get: ##Read/Get info
+          url: "{{ taskURL }}/{{ taskID }}" ##get an specific active task
+      
+      - post: ##Update info
+          url: "{{ taskURL }}/{{ taskID }}" ##update a task
+          json:
+            content: "It's really fun to be updated!!"
+            priority: 2
+
+      - post: ##Update info
+          url: "{{ taskURL }}/{{ taskID }}/close" ##Change task's status to complete
+
+      - post: ##Update info
+          url: "{{ taskURL }}/{{ taskID }}/reopen" ##Change task's status to Open (again)
+
+      - delete: ##Delete info
+          url: "{{ taskURL }}/{{ taskID }}" ##Delete a task
+
+# For more information: https://artillery.io/docs/guides/guides/test-script-reference.html

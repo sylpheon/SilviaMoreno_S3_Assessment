@@ -1,0 +1,122 @@
+{
+  "aggregate": {
+    "timestamp": "2021-03-24T17:37:44.300Z",
+    "scenariosCreated": 5,
+    "scenariosCompleted": 5,
+    "requestsCompleted": 35,
+    "latency": {
+      "min": 174,
+      "max": 1076,
+      "median": 599.6,
+      "p95": 1061.4,
+      "p99": 1076
+    },
+    "rps": {
+      "count": 35,
+      "mean": 4.41
+    },
+    "scenarioDuration": {
+      "min": 3821.4,
+      "max": 4821.5,
+      "median": 4329,
+      "p95": 4821.5,
+      "p99": 4821.5
+    },
+    "scenarioCounts": {
+      "Challenge tasks": 5
+    },
+    "errors": {},
+    "codes": {
+      "200": 15,
+      "204": 20
+    },
+    "matches": 0,
+    "customStats": {},
+    "counters": {},
+    "scenariosAvoided": 0,
+    "phases": [
+      {
+        "duration": 5,
+        "arrivalRate": 1,
+        "name": "Phase 1"
+      }
+    ]
+  },
+  "intermediate": [
+    {
+      "timestamp": "2021-03-24T17:37:44.294Z",
+      "scenariosCreated": 5,
+      "scenariosCompleted": 5,
+      "requestsCompleted": 35,
+      "latency": {
+        "min": 174,
+        "max": 1076,
+        "median": 599.6,
+        "p95": 1061.4,
+        "p99": 1076
+      },
+      "rps": {
+        "count": 35,
+        "mean": 4.41
+      },
+      "scenarioDuration": {
+        "min": 3821.4,
+        "max": 4821.5,
+        "median": 4329,
+        "p95": 4821.5,
+        "p99": 4821.5
+      },
+      "scenarioCounts": {
+        "Challenge tasks": 5
+      },
+      "errors": {},
+      "codes": {
+        "200": 15,
+        "204": 20
+      },
+      "matches": 0,
+      "latencies": [
+        816667900,
+        256468700,
+        223919100,
+        743482700,
+        300693300,
+        771294200,
+        273124800,
+        511305900,
+        497217200,
+        1076031100,
+        286429800,
+        784063100,
+        707620900,
+        272654900,
+        786137200,
+        295233800,
+        697447700,
+        273389500,
+        901750600,
+        1000203000,
+        599635400,
+        1075995300,
+        905575100,
+        292786900,
+        800164500,
+        173984400,
+        585932100,
+        696459800,
+        1017476500,
+        398235000,
+        844349600,
+        331775600,
+        598976600,
+        726231700,
+        411074400
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 0,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    }
+  ]
+}
