@@ -21,10 +21,11 @@ config:
 scenarios:
   - name: "Challenge tasks"
     flow:
+      #- function: "task"
       - post:  ##Create info
           url: "{{ taskURL }}" #Create a new task
           json:
-            content: "A new task" ##"$faker.lorem.content"
+            content: "A new task" ##{{content}}
           capture:
             json: "$.id"
             as: "taskID"
